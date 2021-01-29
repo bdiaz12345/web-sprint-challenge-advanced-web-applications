@@ -31,7 +31,7 @@ const ColorList = ({ colors, updateColors }) => {
 
   const deleteColor = color => {
     axiosWithAuth()
-      .delete(`/colors/${id}`)
+      .delete(`/colors/${color.id}`)
       .then(res => {
         console.log(res.data)
       })
@@ -49,7 +49,6 @@ const ColorList = ({ colors, updateColors }) => {
             <span>
               <span className="delete" onClick={e => {
                     e.stopPropagation();
-                    setId(color.id)
                     deleteColor(color)
                   }
                 }>

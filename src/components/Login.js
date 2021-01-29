@@ -37,9 +37,9 @@ const Login = () => {
     <>
       <form onSubmit={handleLogin}>
         <p>Username</p>
-        <input type='text' name='username' onChange={handleChange} />
+        <input type='text' name='username' value={credentials.username} onChange={handleChange} />
         <p>Password</p>
-        <input type='password' name='password' onChange={handleChange} />
+        <input type='password' name='password' value={credentials.password} onChange={handleChange} />
         {errorMessage !== '' ? <p>{errorMessage}</p> : console.log('no errors!')}
         <button>Login</button>
       </form>
